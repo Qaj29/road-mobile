@@ -1,0 +1,55 @@
+<ion-header>
+
+  <div class="trackNumber">
+    <ion-title text-center >Your delivery status</ion-title>
+  </div>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="status">
+
+    <div class="round" [ngClass]="{'active' : info[0]?.status == 'Created'}">
+      <ion-img width="80" height="80" src="assets/imgs/bus.png"></ion-img>
+     <p></p>
+    </div>
+    <div class="line"></div>
+
+    <div class="round {{ info[0]?.status }}">
+      <ion-img width="80" height="80" src="assets/imgs/bus.png"></ion-img>
+      <p></p>
+    </div>
+    <div class="line"></div>
+    <div class="round {{ info[0]?.status }}">
+      <ion-img width="80" height="80" src="assets/imgs/bus.png"></ion-img>
+      <p></p>
+    </div>
+    <div class="line"></div>
+    <div class="round {{ info[0]?.status }}">
+      <ion-img width="80" height="80" src="assets/imgs/bus.png"></ion-img>
+      <p></p>
+    </div>
+    <div class="line"></div>
+    <div class="round {{ info[0]?.status }}" [ngClass]="{'active' : info[0]?.status == 'Deleted'}">
+      <ion-img width="80" height="80" src="assets/imgs/bus.png"></ion-img>
+      <p></p>
+    </div>
+  </div>
+  <p class="trackWhite" *ngFor="let track of info">
+     Status: {{ track.status }}<br>
+     Date: {{ track.date }} <br>
+     Time: {{ track.time }}
+  </p>
+
+</ion-content>
+
+<script>
+    (function() {
+        var deleted = $('.round').last();
+          if(deleted.hasClass('Deleted')){
+              $('.round').hide();
+              deleted.show()
+          }
+    })();
+
+</script>

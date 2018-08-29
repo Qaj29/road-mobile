@@ -1,0 +1,16 @@
+<ion-content padding>
+
+  <div class="pageIcon recover">
+    <ion-icon text-center  ios="ios-person-add" md="md-person-add" class="topIcon"></ion-icon>
+  </div>
+  <h4 text-center>Recover Your Password</h4>
+  <form  class="formStyle recoverForm" (ngSubmit)="doReset()">
+    <ion-item>
+      <ion-input [(ngModel)]="userMail.email" name="email" type="text" placeholder="Enter your email address" ></ion-input>
+      <i class="icon ion-ios-search"></i>
+    </ion-item>
+    <button ion-button block type="submit">
+      Submit
+    </button>
+  </form>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-content padding>
+  <h4 text-center>Personal information</h4>
+  <form class="formStyle" id="formReg" (submit)="createTask()">
+    <ion-item>
+      <ion-input [(ngModel)]="job_pickup_name"  name="job_pickup_name" type="text" placeholder="Name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="job_pickup_email" name="job_pickup_email" type="job_pickup_email" placeholder="Emil" autocomplete="off"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="job_pickup_phone" name="job_pickup_phone" type="text" placeholder="Phone number" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="job_pickup_address" name="job_pickup_address" type="text" placeholder="Pickup Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Expire date</ion-label>
+      <ion-input [(ngModel)]="date" name="job_pickup_date" type="date" placeholder="Pickup Date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="time" name="job_pickup_time" type="time" placeholder="Pickup Time"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Payment method</ion-label>
+
+      <ion-select [(ngModel)]="tasks.payment" name="payment" multiple="false">
+        <ion-option value="Cash delivery">Cash delivery</ion-option>
+        <ion-option value="Bank transfer">Bank transfer</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <button ion-button block type="submit" class="personalNext">
+      Next
+    </button>
+  </form>
+</ion-content>

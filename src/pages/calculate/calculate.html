@@ -1,0 +1,64 @@
+<ion-content padding>
+  <div text-center class="pageIcon"><ion-icon ios="ios-calculator" md="md-calculator"></ion-icon></div>
+  <button clear (click)="goNotePage()" class="noBg">
+    <ion-img width="40" height="40" src="../../assets/imgs/mobsnowgrey.png" class="ionImg"></ion-img>
+  </button>
+  <h4 text-center>Calculate Your Shippment Cost</h4>
+  <form class="formStyle calculateForm" (submit)="doCalculate()">
+    <ion-item>
+      <ion-label>From</ion-label>
+      <ion-select [(ngModel)]="calcData.from" name="from" multiple="false" (ionChange)="getCars()">
+        <ion-option *ngFor="let city of result" value="{{ city }}">{{ city}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-select [(ngModel)]="calcData.to" name="to" multiple="false" (ionChange)="getCars()">
+
+        <ng-container *ngFor="let city of result">
+          <ion-option *ngIf="calcData.from == 'Riyadh' && city != 'Riyadh'">
+            {{city}}
+          </ion-option>
+        </ng-container>
+        <ion-option *ngIf="calcData.from != 'Riyadh'" value="Riyadh">Riyadh</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Kind of shippment</ion-label>
+      <ion-select [(ngModel)]="calcData.frosen" name="frosen" multiple="false">
+        <ion-option value="Meet (-8 to -20)">Meet (-8 to 20)</ion-option>
+        <ion-option value="Medicine (-8 to 20)">Medicine (-8 to -20)</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Shipment Type</ion-label>
+      <ion-select [(ngModel)]="calcData.shipment_type" name="shipment_type" multiple="false">
+        <ion-option value="by_weight">By Weight</ion-option>
+        <ion-option value="full_track">Full Track</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item *ngIf="calcData.shipment_type == 'by_weight'">
+      <ion-input [(ngModel)]="calcData.weight " name="weight" type="text" placeholder="Weight"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="calcData.shipment_type == 'full_track'">
+      <ion-label>Full Track</ion-label>
+      <ion-select [(ngModel)]="calcData.car" name="car" multiple="false">
+        <ion-option *ngFor="let car of cars" value="{{car}}">Car {{car}} ton</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <p (click)="goRent()" class="renting">Rent Montly or Daily</p>
+
+    <button inline ion-button block type="reset" class="resetBtn">
+      Clear
+    </button>
+    <button inline ion-button block type="submit">
+      Search
+    </button>
+  </form>
+</ion-content>

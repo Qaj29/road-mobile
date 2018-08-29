@@ -1,0 +1,28 @@
+<ion-content padding class="loginPage">
+  <button clear (click)="goYourourNot()">
+    <ion-img width="40" height="40" src="assets/imgs/mobsnowgrey.png" class="ionImg"></ion-img>
+  </button>
+    <ion-icon text-center ios="ios-contact" md="md-contact" color="primary" class="topIcon"></ion-icon>
+  <h4 text-center>Sign In to Your Account</h4>
+  <form (ngSubmit)="doLogin()" class="formStyle" method="post">
+    <ion-item>
+      <ion-input [(ngModel)]="loginData.email" name="email" type="email" placeholder="Email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="loginData.password" name="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <button ion-button block type="submit">
+      Sign in
+    </button>
+  </form>
+
+    <button text-center block ion-button clear (click)="passRecover()">
+      Forgot password?
+    </button>
+  <div text-center class="haventAccount">
+    <span>Don't have an account?</span>
+    <button ion-button   clear (click)="register()">
+       Register Now
+    </button>
+  </div>
+</ion-content>

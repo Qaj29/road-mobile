@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h4 text-center>Check out</h4>
+  <p text-center class="checkoutTotal">
+    <span>785</span> Sar
+  </p>
+  <form id="chckoutForm" class="formStyle">
+    <ion-item class="chckoutFormFirst">
+      <ion-label>Cash</ion-label>
+      <ion-select  name="cash" multiple="false">
+        <ion-option value="Cash value">Cash value</ion-option>
+        <ion-option value="Other cash">Other cash</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Debit/Credit card</ion-label>
+      <ion-select name="debitCredit" multiple="false">
+        <ion-option value="Debit">Debit</ion-option>
+        <ion-option value="Credit">Credit</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input   name="card_name" type="text" placeholder="Name on Card" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  name="card_number" type="text" placeholder="Card number" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  name="exire_date" type="text" placeholder="Expiry date" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  name="secur_code" type="text" placeholder="Security Code" ></ion-input>
+    </ion-item>
+    <button ion-button block type="submit" class="personalNext">
+      Play
+    </button>
+  </form>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-content padding>
+  <ion-icon ios="ios-contact" md="md-contact" color="primary" class="topIcon"></ion-icon>
+
+  <h4 text-center>Create your account</h4>
+  <form class="formStyle" id="formReg" (submit)="doSignup()">
+    <ion-item>
+      <ion-input [(ngModel)]="regData.name" name="name" type="text" placeholder="Name" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="regData.sur_name" name="sur_name" type="text" placeholder="Surname" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="regData.email" name="email" type="email" placeholder="Email" autocomplete="off"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="regData.phone_number" name="phone_number" type="text" placeholder="Phone number" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="regData.password" name="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="regData.password_confirmation" name="password_confirmation" type="password" placeholder="Confirm password"></ion-input>
+    </ion-item>
+    <button ion-button block type="submit">
+      SignUp
+    </button>
+  </form>
+</ion-content>

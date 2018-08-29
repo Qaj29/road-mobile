@@ -1,0 +1,22 @@
+<ion-header>
+  <div class="trackPageHeader">
+  <button (click)="goHome()" class="cancel">
+    Cancel
+  </button>
+  <h4 text-center>Find Out Where Your Parcel is.</h4>
+  <form (submit)="trackSearch()" class="formStyle">
+    <ion-item>
+      <ion-input [(ngModel)]="job_id"  name="job_id" type="text" placeholder="Shipping number" ></ion-input>
+      <i class="icon ion-ios-search"></i>
+    </ion-item>
+    <button ion-button block type="submit">
+      Track
+    </button>
+  </form>
+  </div>
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>

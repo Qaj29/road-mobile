@@ -1,0 +1,26 @@
+
+<ion-content padding>
+  <div text-center class="center-img">
+    <button clear (click)="calcultaeFn()">
+      <ion-icon ios="ios-calculator" md="md-calculator" class="topIcon left"></ion-icon>
+    </button>
+    <ion-img width="40" height="40" src="../../assets/imgs/snowmobile.png" class="ionImg"></ion-img>
+    <button clear (click)="accountFn()">
+      <ion-icon text-right ios="ios-contact" md="md-contact" color="default" class="topIcon right"></ion-icon>
+    </button>
+  </div>
+  <div class="how-works">
+    <p *ngFor="let note of userNotes[0]">
+      Your item #{{ note['job_id'] }} has been created at {{ note['created_at'] }}.<br>
+      Pickup address: {{ note['job_pickup_address'] }}<br>
+      Tracking link: {{ note['tracking_link'] }}<br><br>
+      <span text-right block class="log-time">Updated at: <i>{{ note['updated_at'] }}</i></span>
+    </p>
+
+
+  </div>
+  <p text-center class="nonotes">you have no more notifications</p>
+  <button ion-button block class="checkItem" (click)="goTrack()">
+    Check for item
+  </button>
+</ion-content>

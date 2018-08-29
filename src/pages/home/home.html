@@ -1,0 +1,29 @@
+<ion-content padding>
+  <div text-center class="center-img">
+    <button clear (click)="calcultaeFn()">
+      <ion-icon ios="ios-calculator" md="md-calculator" class="topIcon left"></ion-icon>
+    </button>
+    <ion-img width="40" height="40" src="assets/imgs/snowmobile.png" class="ionImg"></ion-img>
+    <button clear (click)="accountFn()">
+      <ion-icon text-right ios="ios-contact" md="md-contact" color="default" class="topIcon right"></ion-icon>
+    </button>
+  </div>
+  <div class="how-works">
+    <p>
+      Hi there, we are Road, a logistics company.
+      we are here to deliver your frozed food.
+      <span text-right block class="log-time"></span>
+    </p>
+    <p class="trackWrap">
+      If you have tracking id checkout your deliver status
+      <button clear (click)="goTrack()" class="tarckBtn" class="trackBtn">
+        track
+      </button>
+    </p>
+    <div class="how-works-img">
+      <p>How it works?</p>
+      <ion-img src="assets/imgs/work-group.png"></ion-img>
+      <span text-right block class="log-time">Just now</span>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-content padding class="account-page">
+    <button clear (click)="goNotePage()" class="goNote">
+        <ion-img width="40" height="40" src="assets/imgs/mobsnowgrey.png" class="ionImg"></ion-img>
+    </button>
+    <ion-icon ios="ios-contact" md="md-contact" color="primary" class="topIcon"></ion-icon>
+    <ion-icon name="log-out" class="pull-right logout-action" (click)="logout()" class="logout"></ion-icon>
+
+    <h4 text-center>
+        Welcome to your account
+    </h4><br>
+    <ion-item color="primary" class="account-info-wrap">
+        <h4>{{ userDetails?.name }} {{ userDetails?.sur_name }}</h4><br>
+        <p>Phone: {{ userDetails?.phone_number }} </p><br>
+        <p>Email: {{ userDetails?.email }} </p><br>
+    </ion-item>
+    <!--<h5>Your shippment</h5>
+    <div class="shippment-detail">
+
+        <<p>In process</p>
+        <p>Delayed</p>
+        <p>Delievered</p>-
+    </div>-->
+    <button ion-button block (click)="goNotePage()" class="checkOrder">
+        Check your orders status
+    </button><br>
+    <button ion-button block (click)="goShipPage()" class="addNewItem">
+        Add new order
+    </button>
+</ion-content>

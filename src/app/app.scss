@@ -1,0 +1,410 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+h1, h2, h3, h4,h5,h6{
+  font-weight: 400;
+}
+.text-input-md {
+  margin: 8px;
+}
+ion-img{
+  background: transparent;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: transparent;
+  -webkit-box-shadow: inset 0 -1px 0 0 #fff;
+  box-shadow: inset 0 -1px 0 0 #fff;
+}
+.item-md{
+  font-size: 1.5rem;
+}
+.ion-page > ion-content{
+  background-color: #f2f2f3;
+}
+ion-navbar.toolbar .toolbar-content-md{
+  text-align: right;
+}
+.topIcon{
+  display: block;
+  font-size: 3.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content-block{
+  margin: 30px auto 0 auto;
+  max-width: 90%;
+}
+.item-md.item-block .item-inner{
+  border: none;
+}
+.content-block .item-md{
+  padding-left: 0;
+}
+.formStyle{
+  margin-top: 45px;
+}
+
+.formStyle > *{
+  margin: 15px auto;
+  border-radius: 30px;
+}
+
+.formStyle > button{
+  border-radius: 30px;
+  margin-top: 100px;
+}
+
+.formStyle.calculateForm > button{
+  width: 42%;
+  position: absolute;
+}
+.formStyle.calculateForm > button.resetBtn{
+  left: 16px;
+  background-color: #b3b3b3;
+}
+.formStyle.calculateForm > button:last-child{
+  right: 16px;
+}
+
+.haventAccount{
+  margin: 100px auto 0 auto;
+  width: 100%;
+}
+
+.haventAccount .button-clear-md{
+  margin-top: -1px;
+  color: #000;
+}
+
+.confirmPage{
+  padding-top: 90px;
+}
+.confirmPage > div{
+  margin-top: 70px
+}
+
+button.confirmBtn{
+  position: absolute;
+  bottom: 40px;
+  border-radius: 30px;
+  width: 90%;
+}
+
+.center-img img{
+  width: 40px;
+}
+
+.center-img .topIcon{
+  position: absolute;
+  top: 10px;
+}
+.trackWrap{
+  height: 80px;
+  position: relative;
+}
+.trackBtn{
+  color: #fff;
+  background: #488aff;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 12px;
+  padding: 4px 14px;
+  font-size: 16px;
+  right: 18px;
+}
+
+
+.center-img .topIcon.right{
+  right: 16px;
+  color: #d3d3d3;
+  font-size: 45px;
+}
+p.renting{
+  color: #488aff;
+  margin-left: 15px;
+  font-weight: bold;
+  margin-top: 25px;
+  font-size: 18px;
+}
+.loginPage .topIcon{
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 16px;
+}
+
+.topIcon.left{
+  left: 16px;
+  color: #f0efef;
+  width: 38px;
+  background-color: #d3d3d3;
+  font-size: 25px;
+  border-radius: 100%;
+  height: 38px;
+  line-height: 38px;
+}
+
+.pageIcon > *{
+  color: #f0efef;
+  width: 42px;
+  background: #4594cf;
+  font-size: 27px;
+  border-radius: 100%;
+  height: 42px;
+  line-height: 42px;
+}
+.center-img > button{
+  background: transparent;
+}
+.how-works{
+  margin-top: 30px;
+}
+.how-works > *{
+  background-color: #fff;
+  padding: 15px 15px 7px 15px;
+  border-radius: 24px;
+  color: #575959;
+  line-height: 1.7em;
+}
+.log-time{
+  display: block;
+}
+
+.account-page > h4{
+  margin-bottom: 30px;
+}
+
+.account-page button.goNote{
+  position: absolute;
+  background: transparent;
+}
+.account-info-wrap{
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 34px;
+}
+
+.account-info-wrap h4{
+  font-size: 2.6rem;
+}
+
+.account-info-wrap .item-md p:first-child{
+  font-size: 1.8rem;
+}
+
+.shippment-detail p{
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 7px 0;
+}
+
+.addNewItem,.checkOrder{
+  border-radius: 24px;
+  width: 45%;
+  position: inherit;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.checkOrder{
+  left: 16px;
+}
+
+.addNewItem{
+  right: 16px;
+  margin-top: -14px;
+}
+
+.trackPageHeader, button.cancel{
+  background-color: #4594cf;
+  padding: 20px 16px;
+}
+button.cancel, .trackPageHeader h4{
+  color: #fff;
+}
+
+.trackPageHeader button[type="submit"]{
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.trackNumber{
+  background-color: #4594cf;
+  height: 80px;
+  line-height: 80px;
+}
+
+.trackNumber *{
+  color: #fff
+}
+
+div.status{
+  width: 90%;
+  position: relative;
+  text-align: center;
+  margin: 80px auto 50px auto;
+}
+
+div.status .round{
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #253957;
+  border: 1px solid #253957;
+  display: inline-block;
+}
+
+div.status .round ion-img{
+  position: absolute;
+  top: -80px;
+  margin-left: -10%;
+}
+
+
+.logout{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 40px;
+}
+
+div.status .round:not(.active) ion-img{
+  display: none !important;
+}
+div.status .round.active{
+  background-color: #4594cf;
+}
+div.status .line {
+  width: 20%;
+  height: 1px;
+  border: 1px solid #253957;
+  margin: 0 -2px 3px -2px;
+  background: #253957;
+  display: inline-block;
+}
+
+p.trackWhite, p.trackBlue, .shippGrids > .row{
+  padding: 15px;
+  border-radius: 24px;
+  line-height: 1.7em;
+}
+
+.shippGrids > .row{
+  padding: 12px 4px;
+  border-radius: 20px;
+  line-height: 1.5em;
+  margin-top: 16px;
+}
+
+
+.shippGrids > .row{
+  background: #fff;
+  color: #575959;
+}
+p.trackWhite:nth-child(even){
+  background: #fff;
+  color: #575959;
+}
+p.trackWhite:nth-child(odd){
+  background: #4893cd;
+  color: #fff;
+}
+
+.valignImg{
+  display: flex!important;
+  align-content: center!important;
+  align-items: center!important;
+}
+
+.recover > *{
+  margin: 0 auto;
+  color: #fff;
+}
+
+.recoverForm button[type="submit"]{
+  width: 70%;
+  left: 50%;
+  margin-left: -35%;
+}
+
+button.chooseBtn{
+  border-radius: 20px;
+  height: 2.8em;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #488aff;
+  padding: 0 1em;
+  width: 90%;
+  margin-left: -45%;
+  left: 50%;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.checkItem, .personalNext{
+  border-radius: 24px;
+  width: 90%;
+}
+.checkItem{
+  margin: 0 auto;
+}
+.checkoutTotal{
+  height: 100px;
+  background: #4793cd;
+  color: #fff;
+  line-height: 100px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.checkoutTotal span{
+  font-size: 26px;
+}
+
+#chckoutForm{
+  margin-top: 0;
+}
+#chckoutForm > .item:first-child{
+  margin-bottom:0;
+}
+
+#chckoutForm > .item:first-child,#chckoutForm > .item:nth-child(2) {
+  margin-top: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.loginPage >div > button, .noBg{
+  background: transparent;
+}
+
+.noBg{
+  right: 16px;
+  top: 16px;
+  position: absolute;
+}
+
+.how-works-img ion-img{
+  width: 100%;
+  height: 380px;
+  background: transparent;
+}

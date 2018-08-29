@@ -1,0 +1,66 @@
+<ion-content padding>
+  <div text-center class="pageIcon"><ion-icon ios="ios-calculator" md="md-calculator"></ion-icon></div>
+  <button clear (click)="goNotePage()" class="noBg">
+    <ion-img width="40" height="40" src="../../assets/imgs/mobsnowgrey.png" class="ionImg"></ion-img>
+  </button>
+  <h4 text-center>Rent Montly or Daily</h4>
+  <form class="formStyle calculateForm" (submit)="doRenting()">
+    <ion-item>
+      <ion-input [(ngModel)]="rentingData.name " name="name" type="text" placeholder="Name *"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="rentingData.email " name="email" type="text" placeholder="Email *"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="rentingData.phone " name="phone" type="text" placeholder="Phone *"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [(ngModel)]="rentingData.message " name="message" type="text" placeholder="message"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>From</ion-label>
+      <ion-select [(ngModel)]="rentingData.from" name="from" multiple="false" (ionChange)="getCars()">
+        <ion-option *ngFor="let city of result" value="{{ city }}">{{ city}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>To</ion-label>
+      <ion-select [(ngModel)]="rentingData.to" name="to" multiple="false" (ionChange)="getCars()">
+
+        <ng-container *ngFor="let city of result">
+          <ion-option *ngIf="rentingData.from == 'Riyadh' && city != 'Riyadh'">
+            {{city}}
+          </ion-option>
+        </ng-container>
+        <ion-option *ngIf="rentingData.from != 'Riyadh'" value="Riyadh">Riyadh</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Car *</ion-label>
+      <ion-select [(ngModel)]="rentingData.car" name="car" multiple="false">
+        <ion-option *ngFor="let car of cars" value="{{car}}">Car {{car}} ton</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Montly or Daily *</ion-label>
+      <ion-select [(ngModel)]="rentingData.type" name="type" multiple="false">
+        <ion-option value="daily">Daily</ion-option>
+        <ion-option value="montly">Montly</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <button inline ion-button block type="reset" class="resetBtn">
+      Clear
+    </button>
+    <button inline ion-button block type="submit">
+      Book
+    </button>
+  </form>
+</ion-content>

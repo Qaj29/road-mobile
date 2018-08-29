@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Email confirmation</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <div text-center class="confirmPage">
+    <ion-img width="210" height="30" src="assets/imgs/logo.png"></ion-img>
+    <div>
+      <h4>Thank you</h4>
+      <p>Please confirm your email address</p>
+    </div>
+    <button ion-button block (click)="confirmEmail()" class="confirmBtn">
+      OK
+    </button>
+  </div>
+
+</ion-content>
